@@ -12,6 +12,10 @@ class Game {
 	 * @param {number} amount -  nombre de quadrats per fila de la quadrícula
 	 */
 	constructor(width,height,amount) {
+		this.width = width;
+		this.height = height;
+		this.amount = amount;
+		this.initCanvas(width,height);
 	}
 
 	/**
@@ -21,6 +25,12 @@ class Game {
 	 * @param {number} height -  height del canvas
 	 */
 	initCanvas(width, height) {
+		let canvas = document.createElement("canvas");
+		canvas.width = width;
+		canvas.height = height;
+		canvas.style.border = "2px solid";
+		document.getElementsByTagName("body")[0].appendChild(canvas);
+
 	}
 
 	/**
@@ -28,6 +38,7 @@ class Game {
 	 * Serp al centre, direcció cap a la dreta, puntuació 0
 	 */
 	start() {
+		
 	}
 
 	/**
