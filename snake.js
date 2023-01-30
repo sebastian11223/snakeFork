@@ -9,9 +9,9 @@ class Game {
 	 * @constructor
 	 * @param {number} width -  width del canvas
 	 * @param {number} height -  height del canvas
-	 * @param {number} size -  mida dels quadrats de la quadrícula
+	 * @param {number} amount -  nombre de quadrats per fila de la quadrícula
 	 */
-	constructor(width,height,size) {
+	constructor(width,height,amount) {
 	}
 
 	/**
@@ -90,10 +90,10 @@ class Game {
 	 * Actualitza la direcció de la serp a partir de l'event (tecla dreta, esquerra, amunt, avall)
 	 * @param {event} e - l'event de la tecla premuda
 	 */
-	tecla(e) {
+	input(e) {
 	}
 }
 
 let game = new Game(300,300,15); // Crea un nou joc
-document.onkeydown = game.tecla.bind(game); // Assigna l'event de les tecles a la funció tecla del nostre joc
+document.onkeydown = game.input.bind(game); // Assigna l'event de les tecles a la funció input del nostre joc
 window.setInterval(game.step.bind(game),100); // Crida la funció que actualitza el nostre joc cada 100ms
