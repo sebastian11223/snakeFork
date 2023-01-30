@@ -9,14 +9,14 @@ class Game {
 	 * @constructor
 	 * @param {number} width -  width del canvas
 	 * @param {number} height -  height del canvas
-	 * @param {number} size -  mida de la quadricula
+	 * @param {number} size -  mida dels quadrats de la quadrícula
 	 */
 	constructor(width,height,size) {
 	}
 
 	/**
-	 * Crea un canvas i es guarda el context a un atribut per poder
-	 * accedir-hi als mètodes de pintar al canvas
+	 * Crea un canvas i es guarda el [context](https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D) a un atribut per poder
+	 * accedir-hi des dels mètodes de pintar al canvas (com ara drawSquare, clear)
 	 * @param {number} width -  width del canvas
 	 * @param {number} height -  height del canvas
 	 */
@@ -24,16 +24,16 @@ class Game {
 	}
 
 	/**
-	 * Inicialitza els paràmetres del joc
+	 * Inicialitza els paràmetres del joc:
 	 * Serp al centre, direcció cap a la dreta, puntuació 0
 	 */
 	start() {
 	}
 
 	/**
-	 * Dibuixa un quadrat de la mida de la quadricula (passada al constructor) al canvas
-	 * @param {number} x -  posició x de la quadricula (no del canvas)
-	 * @param {number} y -  posició y de la quadricula (no del canvas)
+	 * Dibuixa un quadrat de la mida de la quadrícula (passada al constructor) al canvas
+	 * @param {number} x -  posició x de la quadrícula (no del canvas)
+	 * @param {number} y -  posició y de la quadrícula (no del canvas)
 	 * @param {string} color -  color del quadrat
 	 */
 	drawSquare(x,y,color) {
@@ -67,13 +67,13 @@ class Game {
 	}
 
 	/**
-	 * Afegeix un menjar a una posició aleatòria
+	 * Afegeix un menjar a una posició aleatòria, la posició no ha de ser cap de les de la serp
 	 */
 	addFood() {
 	}
 
 	/**
-	 * Calcula una nova posició a partir de la ubicació 
+	 * Calcula una nova posició a partir de la ubicació de la serp
 	 * @return {Array} - nova posició
 	 */
 	newTile() {
