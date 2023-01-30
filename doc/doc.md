@@ -29,13 +29,13 @@ Inicialitza els paràmetres del joc i crea el canvas
 | --- | --- | --- |
 | width | <code>number</code> | width del canvas |
 | height | <code>number</code> | height del canvas |
-| size | <code>number</code> | mida de la quadricula |
+| size | <code>number</code> | mida dels quadrats de la quadrícula |
 
 <a name="Game+initCanvas"></a>
 
 ### game.initCanvas(width, height)
-Crea un canvas i es guarda el context a un atribut per poder
-accedir-hi als mètodes de pintar al canvas
+Crea un canvas i es guarda el [context](https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D) a un atribut per poder
+accedir-hi des dels mètodes de pintar al canvas (com ara drawSquare, clear)
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
 
@@ -47,21 +47,21 @@ accedir-hi als mètodes de pintar al canvas
 <a name="Game+start"></a>
 
 ### game.start()
-Inicialitza els paràmetres del joc
+Inicialitza els paràmetres del joc:
 Serp al centre, direcció cap a la dreta, puntuació 0
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
 <a name="Game+drawSquare"></a>
 
 ### game.drawSquare(x, y, color)
-Dibuixa un quadrat de la mida de la quadricula (passada al constructor) al canvas
+Dibuixa un quadrat de la mida de la quadrícula (passada al constructor) al canvas
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| x | <code>number</code> | posició x de la quadricula (no del canvas) |
-| y | <code>number</code> | posició y de la quadricula (no del canvas) |
+| x | <code>number</code> | posició x de la quadrícula (no del canvas) |
+| y | <code>number</code> | posició y de la quadrícula (no del canvas) |
 | color | <code>string</code> | color del quadrat |
 
 <a name="Game+drawSnake"></a>
@@ -98,13 +98,13 @@ La serp xoca amb la posició donada?
 <a name="Game+addFood"></a>
 
 ### game.addFood()
-Afegeix un menjar a una posició aleatòria
+Afegeix un menjar a una posició aleatòria, la posició no ha de ser cap de les de la serp
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
 <a name="Game+newTile"></a>
 
 ### game.newTile() ⇒ <code>Array</code>
-Calcula una nova posició a partir de la ubicació
+Calcula una nova posició a partir de la ubicació de la serp
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
 **Returns**: <code>Array</code> - - nova posició  
