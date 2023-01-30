@@ -40,15 +40,15 @@ class Game {
 	}
 
 	/**
-	 * Dibuixa la serp al canvas
-	 */
-	drawSnake() {
-	}
-
-	/**
 	 * Neteja el canvas (pinta'l de blanc)
 	 */
 	clear() {
+	}
+
+	/**
+	 * Dibuixa la serp al canvas
+	 */
+	drawSnake() {
 	}
 
 	/**
@@ -96,4 +96,4 @@ class Game {
 
 let game = new Game(300,300,15); // Crea un nou joc
 document.onkeydown = game.input.bind(game); // Assigna l'event de les tecles a la funció input del nostre joc
-window.setInterval(game.step.bind(game),100); // Crida la funció que actualitza el nostre joc cada 100ms
+window.setInterval(game.step.bind(game),100); // Fes que la funció que actualitza el nostre joc s'executi cada 100ms
