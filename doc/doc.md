@@ -6,7 +6,7 @@ Classe que representa el joc de la serp (snake)
 **Kind**: global class  
 
 * [Game](#Game)
-    * [new Game(width, height, size)](#new_Game_new)
+    * [new Game(width, height, amount)](#new_Game_new)
     * [.initCanvas(width, height)](#Game+initCanvas)
     * [.start()](#Game+start)
     * [.drawSquare(x, y, color)](#Game+drawSquare)
@@ -17,11 +17,11 @@ Classe que representa el joc de la serp (snake)
     * [.addFood()](#Game+addFood)
     * [.newTile()](#Game+newTile) ⇒ <code>Array</code>
     * [.step()](#Game+step)
-    * [.tecla(e)](#Game+tecla)
+    * [.input(e)](#Game+input)
 
 <a name="new_Game_new"></a>
 
-### new Game(width, height, size)
+### new Game(width, height, amount)
 Inicialitza els paràmetres del joc i crea el canvas
 
 
@@ -29,7 +29,7 @@ Inicialitza els paràmetres del joc i crea el canvas
 | --- | --- | --- |
 | width | <code>number</code> | width del canvas |
 | height | <code>number</code> | height del canvas |
-| size | <code>number</code> | mida dels quadrats de la quadrícula |
+| amount | <code>number</code> | nombre de quadrats per fila de la quadrícula |
 
 <a name="Game+initCanvas"></a>
 
@@ -115,9 +115,9 @@ Calcula el nou estat del joc, nova posició de la serp, nou menjar si n'hi ha ..
 i ho dibuixa al canvas
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
-<a name="Game+tecla"></a>
+<a name="Game+input"></a>
 
-### game.tecla(e)
+### game.input(e)
 Actualitza la direcció de la serp a partir de l'event (tecla dreta, esquerra, amunt, avall)
 
 **Kind**: instance method of [<code>Game</code>](#Game)  
